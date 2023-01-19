@@ -2,6 +2,7 @@
   "name": "@hyperjump/json",
   "version": "0.1.0",
   "description": "JSON parser and stringifier with JSON Pointer support",
+  "type": "module",
   "main": "lib/index.js",
   "exports": {
     "require": "./lib/index.js",
@@ -11,7 +12,7 @@
     "clean": "xargs -a .gitignore rm -rf",
     "lint": "eslint lib",
     "build": "rollup --config rollup.config.js",
-    "test": "mocha --require ts-node/register 'lib/**/*.spec.ts'"
+    "test": "mocha 'lib/**/*.spec.ts'"
   },
   "repository": "github:hyperjump-io/json",
   "keywords": [

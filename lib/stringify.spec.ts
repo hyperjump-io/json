@@ -1,7 +1,12 @@
 import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 import { expect } from "chai";
-import Json from ".";
+import * as Json from "./index.js";
 
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 describe("Json.stringify", () => {
   fs.readdirSync(`${__dirname}/tests`, { withFileTypes: true })

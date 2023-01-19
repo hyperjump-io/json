@@ -1,14 +1,13 @@
 Json
 ====
 
-This is a reimplementation of the builtin `JSON` object to add JSON Pointer parameters to
-the "reviver" and "replacer" functions. Other than the added parameters, the
-interface is the same as the original.
+This is a reimplementation of the builtin `JSON` object to add JSON Pointer
+parameters to the "reviver" and "replacer" functions. Other than the added
+parameters, the interface and behavior is the same as the original.
 
 Installation
 ------------
-Includes support for node.js JavaScript (CommonJS and ES Modules), TypeScript,
-and browsers.
+Includes support for node.js (ES Modules, TypeScript) and browsers.
 
 ```bash
 npm install @hyperjump/json
@@ -18,7 +17,7 @@ Usage
 -----
 
 ```javascript
-const Json = require("@hyperjump/json");
+import * as Json from "@hyperjump/json";
 
 const subject = `{
   "type": "object",

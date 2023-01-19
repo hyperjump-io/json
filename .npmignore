@@ -1,5 +1,6 @@
 .github/
 .eslintrc.json
+.mocharc.json
 **/*.spec.ts
 lib/tests
 tsconfig.json
