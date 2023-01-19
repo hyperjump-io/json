@@ -1,6 +1,6 @@
 {
   "name": "@hyperjump/json",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "JSON parser and stringifier with JSON Pointer support",
   "type": "module",
   "main": "lib/index.js",
