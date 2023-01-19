@@ -18,4 +18,31 @@ describe("Json.stringify", () => {
         expect(Json.stringify(value, undefined, "  ")).to.eql(JSON.stringify(value, undefined, "  "));
       });
     });
+
+  describe("replacer", () => {
+    it("should remove properties that return undefined", () => {
+      const value = {
+        aaa: "foo",
+        bbb: "bar"
+      };
+      const replacer = (key: string, value: unknown) => {
+        if (key !== "aaa") {
+          return value;
+        }
+      };
+
+      expect(Json.stringify(value, replacer)).to.eql(JSON.stringify(value, replacer));
+    });
+
+    it("should remove items that return undefined", () => {
+      const value = ["foo", "bar"];
+      const replacer = (key: string, value: unknown) => {
+        if (key !== "0") {
+          return value;
+        }
+      };
+
+      expect(Json.stringify(value, replacer)).to.eql(JSON.stringify(value, replacer));
+    });
+  });
 });
